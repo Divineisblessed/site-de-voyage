@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <head>
+        <title>Voyage Transportant| destinations, offres, devis.</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <header class="site-header small">
+        <nav class="nav container">
+            <a class="logo" href="index.html">voyage<span class="accent">+</span></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container contact-page">
+        <h1 class="section-title">Demande de devis</h1>
+
+        <div class="contact-grid">
+            <form class="contact-form" action="#" method="post" novalidate>
+                <label>Nom complet
+                    <input type="text" name="name" required>
+                </label>
+                <label>Email <input type="email" name="email" required> </label> <label>Téléphone <input type="tel"
+                        name="phone"> </label> <label>Destination souhaitée <input type="text" name="destination">
+                </label> <label>Dates prévues <input type="text" name="dates" placeholder="Ex: 10/07/2026 - 17/07/2026">
+                </label> <label>Message <textarea name="message" rows="6"></textarea> </label> <button
+                    class="btn primary" type="submit">Envoyer la demande</button>
+            </form>
+            <aside class="contact-info">
+                <h3>Nos coordonnées</h3>
+                <p class="muted">Avenue du Voyage 12, Dakar, Sénégal</p>
+                <p class="muted">contact@voyageplus.example</p>
+                <p class="muted">+221 33 000 0000</p>
+                <h4>Nous trouver</h4>
+                <div class="map"> <iframe title="Carte agence" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3"
+                        loading="lazy"></iframe> </div>
+                <div class="socials"> <a aria-label="Facebook" href="#"><span>f</span></a> <a aria-label="Instagram"
+                        href="#"><span>ig</span></a> <a aria-label="Twitter" href="#"><span>t</span></a> </div>
+            </aside>
+        </div> <!-- Section Devis simple -->
+        <section class="quote container">
+            <h2>Calculer votre devis</h2>
+            <form id="quoteForm" class="quote-form" onsubmit="return false;"> <label>Nombre de personnes : <input
+                        type="number" id="people" min="1" value="1"> </label> <label>Durée du séjour (jours) : <input
+                        type="number" id="days" min="1" value="1"> </label> <label>Destination : <select
+                        id="destination">
+                        <option value="plage">Plage</option>
+                        <option value="montagne">Montagne</option>
+                        <option value="ville">Ville</option>
+                    </select> </label> <label>Options supplémentaires : <select id="option">
+                        <option value="none">Aucune</option>
+                        <option value="excursions">Excursions (+15%)</option>
+                        <option value="assurance">Assurance (+8%)</option>
+                    </select> </label>
+                <div class="quote-actions"> <button type="button" class="btn"
+                        onclick="calculateQuote()">Calculer</button> <button type="button" class="btn"
+                        onclick="resetQuote()">Réinitialiser</button> </div>
+            </form>
+            <p id="result" class="quote-result">Estimation du devis : —</p>
+            <p id="note" class="muted small-note">Ceci est une estimation simple. Pour un devis précis, envoyez votre
+                demande via le formulaire de contact.</p>
+        </section>
+    </main>
+    <footer class="site-footer small">
+        <div class="container footer-grid">
+            <div>
+                <h5>Voyage+</h5>
+                <p class="muted">© 2026</p>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <p class="muted">contact@voyageplus.example</p>
+            </div>
+        </div>
+    </footer>
+
+    <h2>
+        Faire voyager non seulement votre Imagination mais vous aussi. <br />
+        Découvrer les merveilles!
+        <img src="" alt="photofond" />
+    </h2>
+</body>
+
+</html>
