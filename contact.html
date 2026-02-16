@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devis et contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<header class="site-header">
+  <nav class="nav container">
+    <a class="logo" href="index.html">voyage<span class="accent">+</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
   <main>
     <h1 class="section-title">Demande de devis</h1>
 
@@ -39,7 +52,7 @@
 
         <button class="btn primary" type="submit">Envoyer la demande</button>
       </form>
-
+  <footer class="site-footer small"></footer>
       <aside class="contact-info" aria-labelledby="coord-title">
         <h3 id="coord-title">Nos coordonnées</h3>
         <p class="muted">Avenue du Voyage 17, Dakar, Sénégal</p>
@@ -48,13 +61,8 @@
 
         <h4>Nous trouver</h4>
         <div class="map">
-          <iframe
-            title="Carte agence"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3"
-            width="300"
-            height="200"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="Carte agence" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3" width="300"
+            height="200" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="socials">
@@ -66,18 +74,19 @@
     </div>
   </main>
 
-  <footer class="site-footer small">
-    <div class="container footer-grid">
-      <div>
-        <h5>Voyage+</h5>
-        <p class="muted">© 2026</p>
-      </div>
-      <div>
-        <h5>Contact</h5>
-        <p class="muted">contact@voyageplus.example</p>
-      </div>
+
+  <div class="container footer-grid">
+    <div>
+      <h5>Voyage+</h5>
+      <p class="muted">© 2026</p>
     </div>
+    <div>
+      <h5>Contact</h5>
+      <p class="muted">contact@voyageplus.example</p>
+    </div>
+  </div>
   </footer>
 
 </body>
+
 </html>

@@ -1,6 +1,4 @@
-### destinations.html
 
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,6 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="logo" href="index.html">voyage<span class="accent">+</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="destinations.html" aria-current="page">Destinations</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <h5><strong>Let's Go!</strong></h5>
 
@@ -19,28 +28,28 @@
   <!-- Galerie : défilement horizontal simple -->
   <div class="gallery" role="list" aria-label="Galerie des destinations, défilement horizontal">
     <div role="listitem" class="gallery-item">
-      <img src="" alt="London - vue urbaine" />
+      <img src="images/Les 3 bonnes nouvelles de la semaine.jpg" alt="London - vue urbaine" />
       <p class="caption">London</p>
     </div>
 
     <div role="listitem" class="gallery-item">
-      <img src="" alt="Beijin - architecture" />
-      <p class="caption">Beijin</p>
+      <img src="images/Beijing.jpg" alt="Beijing - architecture" />
+      <p class="caption">Beijing</p>
     </div>
 
     <div role="listitem" class="gallery-item">
-      <img src="" alt="Tokyo - quartier animé la nuit" />
+      <img src="images/Shibuya Crossing.jpg" alt="Tokyo - Shibuya" />
       <p class="caption">Tokyo</p>
     </div>
 
     <div role="listitem" class="gallery-item">
-      <img src="" alt="Vancouver - montagnes et océan" />
+      <img src="images/Vancouver Stanley Park.jpg" alt="Vancouver - montagnes et océan" />
       <p class="caption">Vancouver</p>
     </div>
 
     <div role="listitem" class="gallery-item">
-      <img src="" alt="Brésil - plage tropicale" />
-      <p class="caption">Brésil</p>
+      <img src="images/Sightseeing in Brazil_.jpg" alt="Brazil - plage tropicale" />
+      <p class="caption">Brazil</p>
     </div>
   </div>
 
@@ -63,7 +72,7 @@
           <option value="Tokyo">Tokyo</option>
           <option value="Vancouver">Vancouver</option>
           <option value="Beijin">Beijin</option>
-          <option value="Brésil">Brésil</option>
+          <option value="Brazil">Brazil</option>
           <option value="London">London</option>
         </select>
       </label>
@@ -85,7 +94,18 @@
     <p id="note" class="muted small-note">Ceci est une estimation simple. Pour un devis précis, envoyez votre demande via le formulaire de contact.</p>
   </section>
 </main>
-
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h5>Voyage+</h5>
+      <p class="muted">© 2026</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p class="muted">contact@voyageplus.example</p>
+    </div>
+  </div>
+</footer>
 </body>
+
 </html>
-```
