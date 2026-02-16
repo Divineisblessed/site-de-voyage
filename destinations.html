@@ -1,0 +1,91 @@
+### destinations.html
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h5><strong>Let's Go!</strong></h5>
+
+<h1>New Horizons!</h1>
+
+<main>
+  <!-- Galerie : défilement horizontal simple -->
+  <div class="gallery" role="list" aria-label="Galerie des destinations, défilement horizontal">
+    <div role="listitem" class="gallery-item">
+      <img src="" alt="London - vue urbaine" />
+      <p class="caption">London</p>
+    </div>
+
+    <div role="listitem" class="gallery-item">
+      <img src="" alt="Beijin - architecture" />
+      <p class="caption">Beijin</p>
+    </div>
+
+    <div role="listitem" class="gallery-item">
+      <img src="" alt="Tokyo - quartier animé la nuit" />
+      <p class="caption">Tokyo</p>
+    </div>
+
+    <div role="listitem" class="gallery-item">
+      <img src="" alt="Vancouver - montagnes et océan" />
+      <p class="caption">Vancouver</p>
+    </div>
+
+    <div role="listitem" class="gallery-item">
+      <img src="" alt="Brésil - plage tropicale" />
+      <p class="caption">Brésil</p>
+    </div>
+  </div>
+
+  <h5>Prix et durée du séjour.</h5>
+
+  <!-- Section Devis simple -->
+  <section class="quotecontainer" aria-labelledby="quote-title">
+    <h2 id="quote-title">Calculer votre devis</h2>
+    <form id="quoteForm" class="quote-form" onsubmit="return false;">
+      <label for="people">Nombre de personnes :
+        <input type="number" id="people" min="1" value="1" required>
+      </label>
+
+      <label for="days">Durée du séjour (jours) :
+        <input type="number" id="days" min="1" value="1" required>
+      </label>
+
+      <label for="destination">Destination :
+        <select id="destination">
+          <option value="Tokyo">Tokyo</option>
+          <option value="Vancouver">Vancouver</option>
+          <option value="Beijin">Beijin</option>
+          <option value="Brésil">Brésil</option>
+          <option value="London">London</option>
+        </select>
+      </label>
+
+      <label for="option">Options supplémentaires :
+        <select id="option">
+          <option value="none">Aucune</option>
+          <option value="assurance">Assurance (+8%)</option>
+        </select>
+      </label>
+
+      <div class="quote-actions">
+        <button type="button" class="btn" onclick="calculateQuote()">Calculer</button>
+        <button type="button" class="btn" onclick="resetQuote()">Réinitialiser</button>
+      </div>
+    </form>
+
+    <p id="result" class="quote-result">Estimation du devis : —</p>
+    <p id="note" class="muted small-note">Ceci est une estimation simple. Pour un devis précis, envoyez votre demande via le formulaire de contact.</p>
+  </section>
+</main>
+
+</body>
+</html>
+```

@@ -1,0 +1,288 @@
+/* styles.css
+   Palette luxe : gradient burgundy -> royal blue
+   Police : utilise celles que tu as importées dans le head (Playfair Display, Roboto)
+*/
+
+/* Variables couleur */
+:root{
+  --lux-bg-1: #6b0f1a; /* burgundy */
+  --lux-bg-2: #0b3d91; /* royal blue */
+  --accent: #c9a07a;   /* warm gold accent */
+  --muted: #9aa3b2;
+  --surface: #ffffff;
+  --text: #0f1724;
+  --radius: 8px;
+  --container-max: 1100px;
+}
+
+/* Reset léger */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:linear-gradient(180deg, rgba(11,61,145,0.03) 0%, rgba(107,15,26,0.02) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+}
+
+/* Container central */
+.container{
+  max-width:var(--container-max);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Header / Nav */
+.site-header{
+  background: linear-gradient(90deg, rgba(11,61,145,0.06), rgba(107,15,26,0.04));
+  border-bottom:1px solid rgba(15,23,36,0.04);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 0;
+}
+.logo{
+  font-family: "Playfair Display", serif;
+  font-weight:700;
+  font-size:1.25rem;
+  color:var(--text);
+  text-decoration:none;
+}
+.logo .accent{
+  color:var(--accent);
+  margin-left:4px;
+}
+
+/* Nav links */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:12px;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.nav-links a{
+  color:var(--text);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:6px;
+  font-weight:500;
+  transition:background .18s, color .18s, transform .12s;
+}
+.nav-links a:hover,
+.nav-links a:focus{
+  background:linear-gradient(90deg, rgba(11,61,145,0.06), rgba(107,15,26,0.04));
+  outline:none;
+  transform:translateY(-1px);
+}
+.nav-links a[aria-current="page"],
+.nav-links a.active{
+  background:linear-gradient(90deg, var(--lux-bg-1), var(--lux-bg-2));
+  color:#fff;
+  box-shadow:0 6px 18px rgba(11,61,145,0.12);
+}
+
+/* Mobile nav toggle (kept simple) */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  font-size:1.25rem;
+}
+
+/* Hero / bannière */
+.hero{
+  position:relative;
+  color:#fff;
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:48px 16px;
+  background-color:var(--lux-bg-1); /* fallback */
+  background-image: linear-gradient(135deg, rgba(107,15,26,0.85), rgba(11,61,145,0.75));
+  background-blend-mode: multiply;
+  overflow:hidden;
+}
+.hero .container{max-width:900px}
+.hero h1{
+  font-family:"Playfair Display", serif;
+  font-size:2rem;
+  margin:0 0 8px;
+  line-height:1.05;
+  letter-spacing:0.2px;
+}
+.hero p.slogan{
+  margin:0;
+  opacity:0.95;
+  font-weight:400;
+}
+
+/* If you prefer a background image instead of gradient, set inline style:
+   <section class="hero" style="background-image:url('images/banniere.jpg'); background-size:cover; background-position:center;">
+   The gradient above will blend with the image for a luxe overlay.
+*/
+
+/* Offers section */
+.offers{
+  padding:28px 0;
+  background:transparent;
+}
+.offers h2{margin:0 0 12px; font-size:1.25rem}
+.offers ul{display:flex; gap:12px; list-style:none; padding:0; margin:0}
+.offers li{
+  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  padding:10px 14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(15,23,36,0.04);
+  font-weight:600;
+}
+
+/* Gallery horizontal (destinations) */
+.gallery{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  padding:18px 12px;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+  align-items:start;
+}
+.gallery::-webkit-scrollbar{height:10px}
+.gallery::-webkit-scrollbar-thumb{
+  background:linear-gradient(90deg,var(--lux-bg-1),var(--lux-bg-2));
+  border-radius:999px;
+}
+.gallery-item{
+  min-width:240px;
+  flex:0 0 auto;
+  scroll-snap-align:start;
+  background:var(--surface);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(15,23,36,0.06);
+  text-align:left;
+}
+.gallery-item img{
+  display:block;
+  width:100%;
+  height:160px;
+  object-fit:cover; /* important pour cadrer sans déformer */
+  
+}
+.gallery-item .caption{
+  padding:10px 12px;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* Quote / Devis container */
+.quotecontainer{
+  padding:20px;
+  margin:18px 12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(15,23,36,0.04);
+}
+.quotecontainer h2{margin-top:0}
+.quote-form{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px;
+  align-items:start;
+}
+.quote-form label{display:block; font-size:0.95rem}
+.quote-form input,
+.quote-form select,
+.quote-form textarea{
+  width:100%;
+  padding:8px 10px;
+  border:1px solid rgba(15,23,36,0.08);
+  border-radius:6px;
+  background:#fff;
+  font-size:0.95rem;
+}
+.quote-actions{
+  grid-column:1 / -1;
+  display:flex;
+  gap:10px;
+  margin-top:6px;
+}
+
+/* Buttons */
+.btn{
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(90deg,var(--lux-bg-1),var(--lux-bg-2));
+  color:#fff;
+  box-shadow:0 8px 20px rgba(11,61,145,0.12);
+}
+.btn.secondary{
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(15,23,36,0.06);
+}
+
+/* Contact form and aside (contact page) */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:20px;
+  align-items:start;
+  padding:24px 12px;
+}
+.contact-form label{display:block; margin-bottom:6px}
+.contact-info .map iframe{
+  width:100%;
+  height:180px;
+  border:0;
+  border-radius:8px;
+}
+
+/* Footer */
+.site-footer{
+  margin-top:28px;
+  padding:18px 0;
+  background:linear-gradient(90deg, rgba(11,61,145,0.04), rgba(107,15,26,0.03));
+  border-top:1px solid rgba(15,23,36,0.04);
+}
+.footer-grid{display:flex; justify-content:space-between; gap:12px; align-items:center}
+
+/* Muted text */
+.muted{color:var(--muted)}
+
+/* Focus visible for accessibility */
+a:focus, button:focus, input:focus, select:focus, textarea:focus{
+  outline:3px solid rgba(201,160,122,0.18);
+  outline-offset:2px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .quote-form{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .gallery-item{min-width:200px}
+  .hero{min-height:260px; padding:28px 12px}
+}
+@media (max-width:600px){
+  .nav-links{display:none}
+  .nav-toggle{display:inline-block}
+  .gallery-item img{height:120px}
+  .offers ul{flex-direction:column}
+  .logo{font-size:1.1rem}
+}
